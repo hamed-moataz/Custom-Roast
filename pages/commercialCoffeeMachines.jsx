@@ -114,13 +114,14 @@ const CommercialCoffeeMachines = () => {
               style={{
                 display: "grid",
                 placeItems: "center",
-                minHeight: "100vh",
                 marginTop: "-7rem ",
+                width:'400px',
+                height:'content',
               }}
             >
               <div
-                className="col-xs-12 col-sm-12 col-md-12 col-lg-8"
-                style={{ margin: "auto", width: "100%" }}
+                className="col-xs-6 col-sm-6 col-md-4 col-lg-3"
+                style={{ margin: "auto", width: "100%" ,height:'100%' }}
               >
                 <div className="kf-archive-items">
                   {displayedMachines.map((machine, index) => (
@@ -128,7 +129,7 @@ const CommercialCoffeeMachines = () => {
                       key={index}
                       className="kf-archive-item element-anim-1 scroll-animate"
                       data-animate="active"
-                      style={{ margin: " 4rem  auto" }}
+                      style={{width:'100%', height:'100%' }}
                     >
                       <div className="image kf-image-hover">
                         <img
@@ -136,9 +137,9 @@ const CommercialCoffeeMachines = () => {
                           alt="image"
                           style={{
                             width: "100%",
-                            height: "auto",
-                            objectFit: "contain",
-                            display: "block",
+                            height: "300px",
+                            objectFit: "cover",
+                            
                           }}
                         />
                       </div>

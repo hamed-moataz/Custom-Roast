@@ -4512,11 +4512,11 @@ button.mfp-arrow:before {
 }
 
 .kf-archive-item .desc {
-  padding: 45px;
+  padding: 10px;
 }
 
 .kf-archive-item .desc .name {
-  margin: 10px 0 20px 0;
+  margin: 5px 0 ;
   font-size: 30px;
 }
 
@@ -4529,14 +4529,17 @@ button.mfp-arrow:before {
 }
 
 @media screen and (max-width: 767px) {
+  .kf-archive-item {
+    margin-top: 50px;
+  }
   .kf-archive-item .image img {
     height: 270px;
   }
   .kf-archive-item .desc {
-    padding: 30px;
+    padding: 10px;
   }
   .kf-archive-item .desc .name {
-    margin: 10px 0 20px 0;
+    margin: 10px 0;
     font-size: 24px;
   }
 }

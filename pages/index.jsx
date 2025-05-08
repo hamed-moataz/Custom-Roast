@@ -162,6 +162,32 @@ const Index = () => {
                 </div>
               </div>
             </div>
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 mt-2">
+              <h4 className="text-center">Coffee Academy</h4>
+
+              <div className="card ">
+                <Link href="academy">
+                  <img
+                    src="images/service3.jpg"
+                    alt="image"
+                    className="rounded-3"
+                    id="img-edit"
+                  />
+                  <h5
+                    className="name orangeColor text-center mt-2"
+                    style={{ fontSize: "1.5rem" }}
+                  >
+                    Coffee Academy
+                  </h5>
+                </Link>
+                <div className="card-body">
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card’s content.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
