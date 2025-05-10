@@ -3,8 +3,12 @@ import Layouts from "@/src/layouts/Layouts";
 
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+import Video from "../src/components/video";
 
 const Index = () => {
+  const test =
+    "Test > Test Test > Test Test > Test Test > Test Test > Test Test > Test Test > Test Test > Test Test > Test Test > Test Test > Test Test > Test";
   return (
     <>
       <section className="section kf-about section-bg">
@@ -59,22 +63,83 @@ const Index = () => {
                 className="kf-about-image element-anim-1 scroll-animate"
                 data-animate="active"
               >
-                <img
+                <motion.img
                   src="images/about_img.png"
                   alt="image"
                   className="img-index-home-page"
                   style={{ width: "450px", height: "450px" }}
+                  animate={{ y: [0, -10, 0] }} // حركة بسيطة لأعلى ثم رجوع
+                  transition={{
+                    repeat: Infinity,
+                    duration: 2,
+                    ease: "easeInOut",
+                  }}
                 />
               </div>
             </div>
+            <Video />
           </div>
         </div>
       </section>
       {/* Section Services */}
+      <div
+        style={{ height: "100px", overflow: "hidden", position: "relative" }}
+      >
+        <div
+          style={{
+            background: "#F57B35",
+            height: "50px",
+            width: "100%",
+            position: "absolute",
+            top: 0,
+            left: 0,
+          }}
+        >
+          <motion.h1
+            style={{
+              fontSize: "2.5rem",
+              color: "white",
+              whiteSpace: "nowrap", // مهم علشان النص ميكسرش
+              position: "absolute",
+              top: 0,
+              left: 0,
+            }}
+            animate={{ x: ["-100%", "100%"] }}
+            transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+          >
+            {test}
+          </motion.h1>
+        </div>
+        <div
+          style={{
+            background: "#134E97",
+            height: "50px",
+            width: "100%",
+            position: "absolute",
+            top: "50px",
+            left: 0,
+          }}
+        >
+          <motion.h1
+            style={{
+              fontSize: "2.5rem",
+              color: "white",
+              whiteSpace: "nowrap",
+              position: "absolute",
+              top: 0,
+              left: 0,
+            }}
+            animate={{ x: ["100%", "-100%"] }}
+            transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+          >
+            {test}
+          </motion.h1>
+        </div>
+      </div>
       <section
         className="section kf-services section-bg"
-        style={{  position: "relative" , border:"4px dashed blue" }}
-
+        style={{ position: "relative" }}
+        data-aos="fade-up"
       >
         <h2
           className="text-center"
@@ -84,9 +149,8 @@ const Index = () => {
         </h2>
         <div className="container">
           <div className="kf-services-items row justify-content-around align-items-center ">
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 mt-2 ">
-              <h4 className="text-center">                    Machines & Supplies
-              </h4>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 ">
+              <h4 className="text-center"> Machines & Supplies</h4>
               <div className="card ">
                 <Link href="commercialCoffeeMachines">
                   <img
@@ -110,7 +174,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 mt-2">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mt-2">
               <h4 className="text-center">Coffee Menu</h4>
 
               <div className="card ">
@@ -136,7 +200,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 mt-2">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mt-2">
               <h4 className="text-center">Coffee Academy</h4>
 
               <div className="card ">
@@ -162,7 +226,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 mt-2">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mt-2">
               <h4 className="text-center">Coffee Academy</h4>
 
               <div className="card ">

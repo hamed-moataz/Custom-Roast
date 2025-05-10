@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Preloader from "@/src/layouts/Preloader";
 import { getCommercial } from "./api/api";
+import { Typewriter } from "react-simple-typewriter";
+
 
 const CommercialCoffeeMachines = () => {
   const pageSize = 3; // Number of items per page
@@ -82,7 +84,15 @@ const CommercialCoffeeMachines = () => {
               data-splitting="chars"
               data-animate="active"
             >
-              Commercial Coffee Machines
+              <Typewriter
+                    words={["Commercial Coffee Machines"]}
+                    loop={0}
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={2000} // ينتظر 2 ثانية قبل التغيير
+                  />
             </h1>
           </div>
         </section>
@@ -112,24 +122,18 @@ const CommercialCoffeeMachines = () => {
             <div
               className="row"
               style={{
-                display: "grid",
-                placeItems: "center",
                 marginTop: "-7rem ",
-                width:'400px',
                 height:'content',
               }}
             >
               <div
-                className="col-xs-6 col-sm-6 col-md-4 col-lg-3"
-                style={{ margin: "auto", width: "100%" ,height:'100%' }}
               >
-                <div className="kf-archive-items">
+                <div className="kf-archive-items row justify-content-around align-items-center">
                   {displayedMachines.map((machine, index) => (
                     <div
                       key={index}
-                      className="kf-archive-item element-anim-1 scroll-animate"
+                      className="kf-archive-item element-anim-1 scroll-animate col-6 col-sm-6 col-md-4 col-lg-3"
                       data-animate="active"
-                      style={{width:'100%', height:'100%' }}
                     >
                       <div className="image kf-image-hover">
                         <img
