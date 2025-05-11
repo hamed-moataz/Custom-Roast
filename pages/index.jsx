@@ -1,5 +1,6 @@
 import TestimonialsCarousel from "@/src/components/sliders/TestimonialsCarousel";
 import Layouts from "@/src/layouts/Layouts";
+import MachineCard from "@/src/components/MachineCard";
 
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
@@ -50,6 +51,7 @@ const Index = () => {
               <div
                 className="kf-about-quote element-anim-1 scroll-animate"
                 data-animate="active"
+                style={{boxShadow:'  0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1)'}}
               >
                 {/* <img src="images/quote_img.png" alt="image" />
                 <div> */}
@@ -63,17 +65,17 @@ const Index = () => {
                 className="kf-about-image element-anim-1 scroll-animate"
                 data-animate="active"
               >
-                <motion.img
+                <img
                   src="images/about_img.png"
                   alt="image"
                   className="img-index-home-page"
-                  style={{ width: "450px", height: "450px" }}
-                  animate={{ y: [0, -10, 0] }} // حركة بسيطة لأعلى ثم رجوع
-                  transition={{
-                    repeat: Infinity,
-                    duration: 2,
-                    ease: "easeInOut",
-                  }}
+                  // style={{ width: "450px", height: "450px" }}
+                  // animate={{ y: [0, -10, 0] }} // حركة بسيطة لأعلى ثم رجوع
+                  // transition={{
+                  //   repeat: Infinity,
+                  //   duration: 2,
+                  //   ease: "easeInOut",
+                  // }}
                 />
               </div>
             </div>
@@ -87,12 +89,15 @@ const Index = () => {
       >
         <div
           style={{
-            background: "#F57B35",
+            // background: "#F57B35",
+            backgroundImage: "linear-gradient(#F79B72)",
+
             height: "50px",
             width: "100%",
             position: "absolute",
             top: 0,
             left: 0,
+            padding: "20px",
           }}
         >
           <motion.h1
@@ -105,19 +110,20 @@ const Index = () => {
               left: 0,
             }}
             animate={{ x: ["-100%", "100%"] }}
-            transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+            transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
           >
             {test}
           </motion.h1>
         </div>
         <div
           style={{
-            background: "#134E97",
+            backgroundImage: "linear-gradient(#134E97)",
             height: "50px",
             width: "100%",
             position: "absolute",
             top: "50px",
             left: 0,
+            padding: "10px",
           }}
         >
           <motion.h1
@@ -130,7 +136,7 @@ const Index = () => {
               left: 0,
             }}
             animate={{ x: ["100%", "-100%"] }}
-            transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+            transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
           >
             {test}
           </motion.h1>
@@ -149,16 +155,12 @@ const Index = () => {
         </h2>
         <div className="container">
           <div className="kf-services-items row justify-content-around align-items-center ">
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 ">
+            {/* <div className="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 test">
               <h4 className="text-center"> Machines & Supplies</h4>
               <div className="card ">
-                <Link href="commercialCoffeeMachines">
-                  <img
-                    src="images/service1.jpg"
-                    alt="image"
-                    className="rounded-3"
-                    id="img-edit"
-                  />
+                <div className="overlay"></div>
+                <Link href="commercialCoffeeMachines" className="con-link">
+                  <img src="images/service1.jpg" alt="image" id="img-edit" />
                   <h5
                     className="name orangeColor text-center mt-2"
                     style={{ fontSize: "1.5rem" }}
@@ -173,17 +175,18 @@ const Index = () => {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mt-2">
+            </div> */}
+            <MachineCard />
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 test">
               <h4 className="text-center">Coffee Menu</h4>
-
               <div className="card ">
-                <Link href="menu-coffee">
+                <div className="overlay"></div>
+                <Link href="menu-coffee" className="con-link">
                   <img
                     src="images/service2.jpg"
                     alt="image"
-                    className="rounded-3"
                     id="img-edit"
+                    className="card-img-top"
                   />
                   <h5
                     className="name orangeColor text-center mt-2"
@@ -200,17 +203,13 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mt-2">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 test">
               <h4 className="text-center">Coffee Academy</h4>
 
               <div className="card ">
-                <Link href="academy">
-                  <img
-                    src="images/service3.jpg"
-                    alt="image"
-                    className="rounded-3"
-                    id="img-edit"
-                  />
+                <div className="overlay"></div>
+                <Link href="academy" className="con-link">
+                  <img src="images/service3.jpg" alt="image" id="img-edit" />
                   <h5
                     className="name orangeColor text-center mt-2"
                     style={{ fontSize: "1.5rem" }}
@@ -226,17 +225,13 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mt-2">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 test">
               <h4 className="text-center">Coffee Academy</h4>
 
               <div className="card ">
-                <Link href="academy">
-                  <img
-                    src="images/service3.jpg"
-                    alt="image"
-                    className="rounded-3"
-                    id="img-edit"
-                  />
+                <div className="overlay"></div>
+                <Link href="academy" className="con-link">
+                  <img src="images/service3.jpg" alt="image" id="img-edit" />
                   <h5
                     className="name orangeColor text-center mt-2"
                     style={{ fontSize: "1.5rem" }}

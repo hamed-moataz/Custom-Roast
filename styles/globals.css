@@ -1,10 +1,9 @@
 .swiper {
   overflow: unset;
   position: unset;
-
 }
-#img-edit{
-  height: 300px ;
+#img-edit {
+  height: 300px;
   width: 100%;
 }
 /* image popup */
@@ -24,5 +23,125 @@ img.mfp-img {
   top: -110px;
   right: -24px;
 }
+.test .card h5 {
+  color: #f57b35;
+}
+.test .card {
+  position: relative;
+  transition: 0.5s ease;
+  display: grid;
+  grid-template-rows: 1.5fr 0.5fr auto ;
+  overflow: hidden;
+}
+.card.test-model {
+  display: grid;
+  grid-template-rows: 300px auto auto auto;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.card.test-model img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.card.test-model .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(174, 160, 160, 0.3); /* Black see-through */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 1;
+  transition: 0.5s ease;
+  z-index: 1;
+}
+.card.test-model:hover .overlay {
+  opacity: 0;
+}
+.card.test-model:hover {
+  transform: scale(1.05);
+}
+.card.test-model h5 {
+  color: #f57b35;
+}
+@media  (min-width:300px) and (max-width:690px){
+  .video-edit{
+    height: 50vh !important;
+    width: 80% !important;
+    margin: auto !important;
+  }
+   .video-edit video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
 
+   }
+.card.test-model h5 {
+  font-size: 18px !important;
+  margin-top: 0;
+}
+.test .card h5{
+   font-size: 18px !important;
+  margin-top: 0;
+}
+}
+.card.test-model .card-body{
+  width: 100%;
+  height: 100%;
+}
+.card.test-model .card-body p{
+  width: 100%;
+  height: 100%;
+}
 
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.test .card .con-link img {
+  width: 100%;
+  height: 100%;
+}
+
+.test .card:hover {
+  transform: scale(1.03);
+}
+.test .card .overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(174, 160, 160, 0.3); /* Black see-through */
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  opacity: 1;
+}
+.test .card .overlay:hover {
+  opacity: 0;
+}
+.modal-body .row .col-md-6 img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+@media  (min-width:300px) and (max-width:790px) {
+  .modal .modal-dialog .modal-content {
+    margin-top: 130px;
+  }
+   .modal-body .row .col-md-6 img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+} 
+}

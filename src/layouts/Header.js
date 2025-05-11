@@ -111,12 +111,12 @@ const Header = () => {
                   {/* </ul> */}
                 </li>
 
-                <li>
+                <li >
                   <Link href="commercialCoffeeMachines">
                     Machines
                     <i className="las la-angle-down" />
                   </Link>
-                  <ul>
+                  <ul >
                     <li>
                       <Link href="commercialCoffeeMachines" className="blueHover">
                         Commercial Coffee Machines
